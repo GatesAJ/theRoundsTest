@@ -23,7 +23,7 @@ async function apiRequest(method, endpoint = "", body = null) {
   return text;
 }
 
-export default function WordApp() {
+function WordApp() {
   const [input, setInput] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -124,3 +124,13 @@ export default function WordApp() {
     </div>
   );
 }
+
+function App() {
+  return (
+    <div className="App">
+      <WordApp />
+    </div>
+  );
+}
+
+export default App;
