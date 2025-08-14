@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { drawWord } from "../api";
+import { drawWord } from "../Api";
 import StatusMessage from "./StatusMessage";
 import { Button } from "@mui/material";
 
