@@ -24,8 +24,12 @@ export default function AddWordForm() {
       setWord("");
     } catch (err) {
       let msg = "Error adding word.";
+      console.log(err);
       if (err.status === 400) msg = "Invalid input.";
       if (err.status === 503) msg = "Pool is full.";
+      if (err.status === 409) msg = "Word already exists.";
+      if (err.status === 404) msg = "Word not found.";
+
       setStatus({ message: msg, type: "error" });
     } finally {
       setLoading(false);

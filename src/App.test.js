@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import React, { render, screen, fireEvent, waitFor } from "react";
 import App from "./App";
 
 beforeEach(() => {
